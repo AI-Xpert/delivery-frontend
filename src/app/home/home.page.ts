@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TransmissionService } from '../transmission/transmission.service';
+import { RequestMapperService } from '../services/request-mapper.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private _transmit: TransmissionService
+  ) {}
+
+  clicked(): void {
+    console.log("clicked")
+    this._transmit.executeGetRequestPromise(
+      `${RequestMapperService.CHECK}`)
+      .then((res: any) => {
+        console.log(res)
+      })
+      .catch((err: any) => {
+        console.log("err",err)
+      })
+  }
 
 }
