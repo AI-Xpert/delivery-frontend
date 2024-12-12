@@ -1,0 +1,41 @@
+<!-- 
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-title> Welcome</ion-title>
+    <p>Sign in to access your account</p>
+  </div>
+
+
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input [(ngModel)]="phoneNumber">
+        </ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-fab-button (click)="sendOTP()">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+      <ion-item>
+        <ion-input>
+        </ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div>
+        <p> New Member? <a [routerLink]="['/signup']">Signup Now</a></p>
+      </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+      <ion-fab-button [routerLink]="['/home']">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

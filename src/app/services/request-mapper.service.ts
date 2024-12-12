@@ -9,6 +9,9 @@ export class RequestMapperService {
     // URL for App Routing
     public static readonly BASE_RELATIVE_URL: string = '';
     public static readonly ROOT_URL: string = '/';
+    public static readonly AUTH: string = 'auth';
+    public static readonly LOGIN: string = 'login';
+    public static readonly REGISTER: string = 'register';
     
     //URL for API endpoints
     public static readonly REGISTER_URL: string = environment.SERVER_ENDPOINT + 'auth/register';
